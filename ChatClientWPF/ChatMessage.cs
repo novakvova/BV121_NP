@@ -30,9 +30,9 @@ namespace ChatClientWPF
             {
                 using (BinaryReader reader = new BinaryReader(m))
                 {
+                    message.Text = reader.ReadString();
                     message.UserId = reader.ReadString();
                     message.UserName = reader.ReadString();
-                    message.Text = reader.ReadString();
                 }
             }
             return message;

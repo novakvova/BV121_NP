@@ -57,7 +57,7 @@ namespace ChatServerConsole
                 byte[] buffer = new byte[4096]; //щоб якщо буде велике повідомлення, то має влізти
                 int byte_count = stream.Read(buffer); //прочиталі дані від клієнта
                 if (byte_count == 0) break; //якщо клієнта пислав пустоту, то ми зним прощаємося
-                string data = Encoding.UTF8.GetString(buffer); //отримали текстове повідомлення від клієнта
+                string data = Encoding.UTF8.GetString(buffer, 0, byte_count); //отримали текстове повідомлення від клієнта
                 broadcast(data); //розіслали повідомлення усім клєінта хто є в чаті.
                 Console.WriteLine(data); //показуємо повідомення, що прислав клієнт
             }
