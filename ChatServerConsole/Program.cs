@@ -17,8 +17,8 @@ namespace ChatServerConsole
             new Dictionary<int, TcpClient>();
         static void Main(string[] args)
         {
-            Console.InputEncoding = Encoding.UTF8;
-            Console.OutputEncoding = Encoding.UTF8;
+            //Console.InputEncoding = Encoding.UTF8;
+            //Console.OutputEncoding = Encoding.UTF8;
             int count = 1;
             string fileName = "config.txt";
             IPAddress ip;
