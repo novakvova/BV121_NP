@@ -17,8 +17,8 @@ namespace ChatServerConsole
             new Dictionary<int, TcpClient>();
         static void Main(string[] args)
         {
-            //Console.InputEncoding = Encoding.UTF8;
-            //Console.OutputEncoding = Encoding.UTF8;
+            Console.InputEncoding = Encoding.UTF8;
+            Console.OutputEncoding = Encoding.UTF8;
             int count = 1;
             string fileName = "config.txt";
             IPAddress ip;
@@ -57,7 +57,7 @@ namespace ChatServerConsole
                 int byte_count = stream.Read(buffer); //прочиталі дані від клієнта
                 if (byte_count == 0) break; //якщо клієнта пислав пустоту, то ми зним прощаємося
                 string data = Encoding.UTF8.GetString(buffer); //отримали текстове повідомлення від клієнта
-                broadcast(data); //розіслали повідомлення усім клєінта хто є в чаті.
+                broadcast(buffer); //розіслали повідомлення усім клєінта хто є в чаті.
                 Console.WriteLine(data); //показуємо повідомення, що прислав клієнт
             }
             lock(_lock) { list_clients.Remove(id); }
@@ -65,9 +65,9 @@ namespace ChatServerConsole
             client.Close();
         }
         //Відправляємо повідомлення усім клієнтам, які є в чаті - метод broadcast
-        public static void broadcast(string data)
+        public static void broadcast(byte[] buffer)
         {
-            byte[] buffer = Encoding.UTF8.GetBytes(data);
+            //byte[] buffer = Encoding.UTF8.GetBytes(data);
             lock(_lock) //Щоб повідомлення при розсилці не перемішувалися
             {
                 foreach(TcpClient c in list_clients.Values) //перебираємо усі клієнтів
