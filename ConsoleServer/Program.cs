@@ -12,16 +12,17 @@ namespace ConsoleServer
             Console.InputEncoding = Encoding.UTF8;
             Console.OutputEncoding = Encoding.UTF8;
             //Console.WriteLine("Привіт");
-            Console.WriteLine("Наш PC "+ Dns.GetHostName());
-            IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
-            int i = 0;
-            foreach (var ip in ipHostInfo.AddressList)
-            {
-                Console.WriteLine($"{i} - {ip}");
-                i++;
-            }
-            Console.Write("->_");
-            IPAddress ip_select = ipHostInfo.AddressList[int.Parse(Console.ReadLine())];
+            //Console.WriteLine("Наш PC "+ Dns.GetHostName());
+            //IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
+            //int i = 0;
+            //foreach (var ip in ipHostInfo.AddressList)
+            //{
+            //    Console.WriteLine($"{i} - {ip}");
+            //    i++;
+            //}
+            Console.Write("Enter IP->_");
+            string ip =Console.ReadLine();
+            IPAddress ip_select = IPAddress.Parse(ip);
             Console.WriteLine("Ваш сервак буде працювати IP -> "+ ip_select);
             Console.Write("Вкажіть порт(1078)->_ ");
             int port = int.Parse(Console.ReadLine());
