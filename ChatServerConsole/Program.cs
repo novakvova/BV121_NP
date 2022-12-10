@@ -71,7 +71,7 @@ namespace ChatServerConsole
             
             lock(_lock) //Щоб повідомлення при розсилці не перемішувалися
             {
-                Console.WriteLine("Send data client: {0}", data);
+                Console.WriteLine("Count Clients: {0}", list_clients.Values.Count);
                 foreach(TcpClient c in list_clients.Values) //перебираємо усі клієнтів
                 {
                     NetworkStream stream = c.GetStream(); //отримуємо потік окремого клієнта
