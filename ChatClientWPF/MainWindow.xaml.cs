@@ -52,7 +52,7 @@ namespace ChatClientWPF
                 _message.UserId = Guid.NewGuid().ToString();
                 client.Connect(ip, port);
                 ns = client.GetStream();
-                thread = new Thread(o => ReciveData((TcpClient)o));
+                thread = new Thread(ReciveData);
                 thread.Start(client);
             }
             catch(Exception ex)
@@ -61,8 +61,9 @@ namespace ChatClientWPF
             }
         }
         //Оримуємо дані від сервера
-        private void ReciveData(TcpClient client)
+        private void ReciveData(object o)
         {
+            TcpClient client = (TcpClient)o;
             NetworkStream ns = client.GetStream();
             var reciveBytes = new byte[4096];
             int byte_count;
