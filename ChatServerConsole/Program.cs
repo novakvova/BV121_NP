@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Net.Http.Headers;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
@@ -61,6 +62,7 @@ namespace ChatServerConsole
                 Console.WriteLine(data); //показуємо повідомення, що прислав клієнт
             }
             lock(_lock) { list_clients.Remove(id); }
+            Console.WriteLine("Покинув чат клієнт");
             client.Client.Shutdown(SocketShutdown.Both);
             client.Close();
         }
