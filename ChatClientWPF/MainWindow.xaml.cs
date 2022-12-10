@@ -66,11 +66,12 @@ namespace ChatClientWPF
             NetworkStream ns = client.GetStream();
             var reciveBytes = new byte[4096];
             int byte_count;
-            string data = "";
+            
             while((byte_count=ns.Read(reciveBytes))>0)
             {
                 Dispatcher.BeginInvoke(new Action(() =>
                 {
+                    string data = Encoding.UTF8.GetString(reciveBytes);
                     ChatMessage message = ChatMessage.Dessialize(reciveBytes);
                     lbInfo.Items.Add(message.UserName + "-> "+ message.Text);
                 }));
