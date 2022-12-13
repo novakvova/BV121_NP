@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.33027.164
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleServer", "ConsoleServer\ConsoleServer.csproj", "{3FE09B04-9B01-4261-B6DA-13311522B4E8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleClient", "ConsoleClient\ConsoleClient.csproj", "{B21E706A-C18D-4CF0-B6D5-6A588C85CE45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatServerConsole", "ChatServerConsole\ChatServerConsole.csproj", "{CB47D6B9-13F2-4471-9BEB-A359FC73A0E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatServerConsole", "ChatServerConsole\ChatServerConsole.csproj", "{CB47D6B9-13F2-4471-9BEB-A359FC73A0E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatClientWPF", "ChatClientWPF\ChatClientWPF.csproj", "{B3505F4E-7F9A-411E-A2C7-BF665A9C3BAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatClientWPF", "ChatClientWPF\ChatClientWPF.csproj", "{B3505F4E-7F9A-411E-A2C7-BF665A9C3BAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendEmailandSMSConsole", "SendEmailandSMSConsole\SendEmailandSMSConsole.csproj", "{6E66D2FC-525D-40C3-96E0-50E79D38B921}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B3505F4E-7F9A-411E-A2C7-BF665A9C3BAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3505F4E-7F9A-411E-A2C7-BF665A9C3BAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3505F4E-7F9A-411E-A2C7-BF665A9C3BAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E66D2FC-525D-40C3-96E0-50E79D38B921}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E66D2FC-525D-40C3-96E0-50E79D38B921}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E66D2FC-525D-40C3-96E0-50E79D38B921}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E66D2FC-525D-40C3-96E0-50E79D38B921}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
