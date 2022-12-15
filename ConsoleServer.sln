@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatServerConsole", "ChatSe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatClientWPF", "ChatClientWPF\ChatClientWPF.csproj", "{B3505F4E-7F9A-411E-A2C7-BF665A9C3BAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendEmailandSMSConsole", "SendEmailandSMSConsole\SendEmailandSMSConsole.csproj", "{6E66D2FC-525D-40C3-96E0-50E79D38B921}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SendEmailandSMSConsole", "SendEmailandSMSConsole\SendEmailandSMSConsole.csproj", "{6E66D2FC-525D-40C3-96E0-50E79D38B921}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpProtocolConsole", "HttpProtocolConsole\HttpProtocolConsole.csproj", "{B36D4F5A-6EBF-43C3-B28A-A71FB7229111}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{6E66D2FC-525D-40C3-96E0-50E79D38B921}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E66D2FC-525D-40C3-96E0-50E79D38B921}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E66D2FC-525D-40C3-96E0-50E79D38B921}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B36D4F5A-6EBF-43C3-B28A-A71FB7229111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B36D4F5A-6EBF-43C3-B28A-A71FB7229111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B36D4F5A-6EBF-43C3-B28A-A71FB7229111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B36D4F5A-6EBF-43C3-B28A-A71FB7229111}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
