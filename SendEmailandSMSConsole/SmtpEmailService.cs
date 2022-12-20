@@ -1,4 +1,8 @@
-﻿using MailKit.Net.Smtp;
+﻿using MailKit.Net.Imap;
+using MailKit;
+using MailKit.Net.Smtp;
+using MailKit.Search;
+using MailKit.Security;
 using MimeKit;
 using System;
 using System.IO;
@@ -63,6 +67,26 @@ namespace SendEmailandSMSConsole
                     client.Disconnect(true);
                     client.Dispose();
                 }
+            }
+        }
+
+        public void DownloadMessages()
+        {
+            using (var client = new ImapClient())
+            {
+                client.Connect("imap.ukr.net", 993, SecureSocketOptions.SslOnConnect);
+                client.Authenticate(_configuration.UserName, _configuration.Password);
+                client.Inbox.Open(FolderAccess.ReadOnly);
+                var uids = client.Inbox.Search(SearchQuery.All);
+                foreach(var uid in uids)
+                {
+                    var message = client.Inbox.GetMessage(uid);
+                    Console.WriteLine("--------------------------------------");
+                    Console.WriteLine("FROM: {0}",message.From);
+                    Console.WriteLine("Subject: {0}", message.Subject);
+                    message.WriteTo(string.Format("{0}.eml", uid));
+                }
+                client.Disconnect(true);
             }
         }
     }

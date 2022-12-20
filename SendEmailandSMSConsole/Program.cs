@@ -10,7 +10,9 @@ namespace SendEmailandSMSConsole
             Console.InputEncoding = Encoding.UTF8;
             Console.OutputEncoding = Encoding.UTF8;
             //Console.WriteLine("Відправка повідомлення novakvova@gmail.com!");
-            //SmtpEmailService emailService = new SmtpEmailService();
+            SmtpEmailService emailService = new SmtpEmailService();
+            emailService.DownloadMessages();
+
             //Message message = new Message();
             //message.Subject = "Закупляємо альтернативні джерела енергії";
             //message.Body = "Беріть гернератори, інвертери або свічки і усе буде круто";
