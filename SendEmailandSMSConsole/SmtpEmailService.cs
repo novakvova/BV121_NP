@@ -24,18 +24,19 @@ namespace SendEmailandSMSConsole
         }
         public void Send(Message message)
         {
-            var body = new TextPart("plain")
+            var body = new TextPart("html")
             {
-                Text = message.Body
+                Text = message.Body,
+                
             };
-            string path = @"C:\Users\novak\Desktop\images\generate.jpeg";
+            //string path = @"C:\Users\novak\Desktop\images\generate.jpeg";
             // create an image attachment for the file located at path
             var attachment = new MimePart("image", "jpeg")
             {
-                Content = new MimeContent(File.OpenRead(path)),
+               // Content = new MimeContent(File.OpenRead(path)),
                 ContentDisposition = new ContentDisposition(ContentDisposition.Attachment),
-                ContentTransferEncoding = ContentEncoding.Base64,
-                FileName = Path.GetFileName(path)
+                ContentTransferEncoding = ContentEncoding.Base64
+               // FileName = Path.GetFileName(path)
             };
 
             // now create the multipart/mixed container to hold the message text and the
