@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.33130.400
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleServer", "ConsoleServer\ConsoleServer.csproj", "{3FE09B04-9B01-4261-B6DA-13311522B4E8}"
 EndProject
@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TanyChatClientWPF", "TanyCh
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TanyChatServerConsole", "TanyChatServerConsole\TanyChatServerConsole.csproj", "{09DB69B7-255A-4FBC-BC60-BA10F6744D96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FTPAccessSite", "FTPAccessSite\FTPAccessSite.csproj", "{CD952DFB-7E6C-433E-9368-FC9E4EA6C019}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FTPAccessSite", "FTPAccessSite\FTPAccessSite.csproj", "{CD952DFB-7E6C-433E-9368-FC9E4EA6C019}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsSimpleApp", "WinFormsSimpleApp\WinFormsSimpleApp.csproj", "{51BA824B-0AC3-4ED9-8863-E1498B2B552B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{CD952DFB-7E6C-433E-9368-FC9E4EA6C019}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD952DFB-7E6C-433E-9368-FC9E4EA6C019}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD952DFB-7E6C-433E-9368-FC9E4EA6C019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51BA824B-0AC3-4ED9-8863-E1498B2B552B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51BA824B-0AC3-4ED9-8863-E1498B2B552B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51BA824B-0AC3-4ED9-8863-E1498B2B552B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51BA824B-0AC3-4ED9-8863-E1498B2B552B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
