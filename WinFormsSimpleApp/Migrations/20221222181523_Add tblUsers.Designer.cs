@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WinFormsSimpleApp.Data;
 
 namespace WinFormsSimpleApp.Migrations
 {
     [DbContext(typeof(MyDataContext))]
-    partial class MyDataContextModelSnapshot : ModelSnapshot
+    [Migration("20221222181523_Add tblUsers")]
+    partial class AddtblUsers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -54,23 +56,6 @@ namespace WinFormsSimpleApp.Migrations
                     b.ToTable("tblCategories");
                 });
 
-            modelBuilder.Entity("WinFormsSimpleApp.Data.Entities.RoleEntity", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(255)")
-                        .HasMaxLength(255);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("tblRoles");
-                });
-
             modelBuilder.Entity("WinFormsSimpleApp.Data.Entities.UserEntity", b =>
                 {
                     b.Property<int>("Id")
@@ -102,41 +87,11 @@ namespace WinFormsSimpleApp.Migrations
                     b.ToTable("tblUsers");
                 });
 
-            modelBuilder.Entity("WinFormsSimpleApp.Data.Entities.UserRoleEntity", b =>
-                {
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RoleId")
-                        .HasColumnType("int");
-
-                    b.HasKey("UserId", "RoleId");
-
-                    b.HasIndex("RoleId");
-
-                    b.ToTable("tblUserRoles");
-                });
-
             modelBuilder.Entity("WinFormsSimpleApp.Data.Entities.CategoryEntity", b =>
                 {
                     b.HasOne("WinFormsSimpleApp.Data.Entities.CategoryEntity", "Parent")
                         .WithMany()
                         .HasForeignKey("ParentId");
-                });
-
-            modelBuilder.Entity("WinFormsSimpleApp.Data.Entities.UserRoleEntity", b =>
-                {
-                    b.HasOne("WinFormsSimpleApp.Data.Entities.RoleEntity", "Role")
-                        .WithMany()
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("WinFormsSimpleApp.Data.Entities.UserEntity", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
