@@ -18,7 +18,7 @@ namespace SendEmailandSMSConsole
             message.Subject = "Це прикольний шаблон";
             string html = File.ReadAllText("email-template/index.html");
             message.Body = html; //"Беріть гернератори, інвертери або свічки і усе буде круто";
-            message.To = "novakvova@gmail.com";
+            message.To = "maks2212maks@gmail.com";
             emailService.Send(message);
 
             //SMSService sms = new SMSService();

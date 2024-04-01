@@ -98,7 +98,7 @@ namespace TanyChatClientWPF
                         grid.ColumnDefinitions.Add(colDef);
                     }
                     BitmapImage bmp = new BitmapImage();
-                    string someUrl = $"https://bv012.novakvova.com{message.Photo}";
+                    string someUrl = $"https://pv113.itstep.click{message.Photo}";
                     using (var webClient = new WebClient())
                     {
                         byte[] imageBytes = webClient.DownloadData(someUrl);
@@ -158,7 +158,7 @@ namespace TanyChatClientWPF
         }
         private string UploadImage(string base64)
         {
-            string server = "https://bv012.novakvova.com";
+            string server = "https://pv113.itstep.click";
             UploadDTO upload = new UploadDTO();
             upload.Photo = base64Image;
             string json = JsonConvert.SerializeObject(upload);

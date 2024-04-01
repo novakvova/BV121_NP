@@ -19,7 +19,7 @@ namespace SendEmailandSMSConsole
                 SmtpServer = "smtp.ukr.net",
                 Port = 2525,
                 UserName = "super.novakvova@ukr.net",
-                Password = "MVjWbajb9tGqiHgK"
+                Password = "nre4oCokTTkVb3rF"
             };
         }
         public void Send(Message message)
